@@ -70,7 +70,6 @@ else
 
                         <div class="contenido-publicacion-usuario">
                             <form action="manejadores/editarPublicacion.php" method="POST" class="form-publicar ml-2">
-                                <input type="hidden" name="page" value="home">
                                 <input type="hidden" name="id_publicacion" value="<?php echo $publicacion->id ?>">
                                 <textarea id="contenidoPublicacion-<?php echo $publicacion->id ?>" name="contenidoPublicacion" class="text-publicacion" required disabled><?php echo $publicacion->contenido ?></textarea>
                                 <button id="btnGuardar-<?php echo $publicacion->id ?>" class="btn-pastel btn-oculto mt-2">Guardar cambios</button>
@@ -80,6 +79,7 @@ else
 
                         <div class="formulario-comentarios">
                             <form action="manejadores/comentar.php" class="form-comentar" method="POST">
+                                <input type="hidden" name="page" value="home">
                                 <input type="hidden" name="id_publicacion" value="<?php echo $publicacion->id ?>">
                                 <input type="text" name="contenido" class="comentario-usuario" placeholder="Agregar un comentario" required>
                                 <div class="btn-comentario-container">
